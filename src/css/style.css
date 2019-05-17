@@ -1,3 +1,54 @@
 body {
   background: #eee;
 }
+
+#input-box {
+  width: 100%;
+}
+
+#input-box form {
+  width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#input-box label {
+  display: block;
+  padding: 5px;
+}
+
+#alert {
+  color: red;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+#submit {
+  margin-top: 20px;
+}
+
+.image {
+  display: inline-block;
+  position: relative;
+}
+
+img {
+  width: 250px;
+  padding: 20px;
+}
+
+.delete {
+  position: absolute;
+  padding: 10px;
+  border-radius: 50%;
+  right: 5px;
+  top: 5px;
+}
