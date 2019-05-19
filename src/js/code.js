@@ -21,16 +21,19 @@ export default class Code {
     event.preventDefault();
     const name = this.html.submit.parentElement.name.value;
     const url = this.html.submit.parentElement.url.value;
-    if (true) { // TODO validate
+    const validator = document.createElement('img');
+    validator.onload = () => {
       this.lastID += 1;
       this.images.push(new Image(this.lastID, name, url));
       this.html.submit.parentElement.name.value = '';
       this.html.submit.parentElement.url.value = '';
       this.html.alertError.classList.add('hidden');
-    } else {
+      this.redrawDOM(this.images);
+    };
+    validator.onerror = () => {
       this.html.alertError.classList.remove('hidden');
-    }
-    this.redrawDOM(this.images);
+    };
+    validator.src = url;
   }
 
   deleteListener(id) {
